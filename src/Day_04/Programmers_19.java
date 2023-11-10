@@ -2,21 +2,13 @@ package Day_04;
 
 public class Programmers_19 {
     public int solution(String ineq, String eq, int n, int m) {
-        int answer = 0;
-        switch (ineq+eq) {
-            case ">=" :
-                answer = n >= m ? 1 : 0;
-                break;
-            case "<=" :
-                answer = n <= m ? 1 : 0;
-                break;
-            case ">!" :
-                answer = n > m ? 1 : 0;
-                break;
-            case "<!" :
-                answer = n < m ? 1 : 0;
-                break;
-        }
+        int answer = switch (ineq + eq) {
+            case ">=" -> n >= m ? 1 : 0;
+            case "<=" -> n <= m ? 1 : 0;
+            case ">!" -> n > m ? 1 : 0;
+            case "<!" -> n < m ? 1 : 0;
+            default -> 0;
+        };
         return answer;
     }
     public static void main(String[] args) {
