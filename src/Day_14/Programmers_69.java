@@ -4,22 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Programmers_69 {
-    public int[] solution(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] >= 50 && arr[i] % 2 == 0) {
-                arr[i] = arr[i] / 2;
-            } else if (arr[i] < 50 && arr[i] % 2 != 0) {
-                arr[i] = arr[i] * 2;
+    public int[] solution(int[] arr, int[][] queries) {
+
+        for (int[] query : queries) {
+            int s = query[0];
+            int e = query[1];
+
+            for (int i = s; i <= e; i++) {
+                arr[i] += 1;
             }
         }
+
         return arr;
     }
 
 
     public static void main(String[] args) {
         Programmers_69 sol = new Programmers_69();
-        int[] arr = {1, 2, 3, 100, 99, 98};
-        System.out.println(sol.solution(arr));
+        int[] arr = {0,1,2,3,4};
+        int[][] queries = {{0,1}, {1,2}, {2,3}};
+        System.out.println(sol.solution(arr, queries));
     }
 }
 
