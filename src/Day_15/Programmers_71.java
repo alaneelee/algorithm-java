@@ -21,7 +21,6 @@ public class Programmers_71 {
         }
     }
 
-
     public static void main(String[] args) {
         Programmers_71 sol = new Programmers_71();
         int[] arr = {1, 2, 3, 100, 99, 98};
