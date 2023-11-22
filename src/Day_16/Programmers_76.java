@@ -8,6 +8,6 @@ public class Programmers_76 {
     public static void main(String[] args) {
         Programmers_76 sol = new Programmers_76();
 
-        System.out.println(sol.solution("AbCdEfG"));
+        System.out.println(sol.solution("ABbCdEfG"));
     }
 }
